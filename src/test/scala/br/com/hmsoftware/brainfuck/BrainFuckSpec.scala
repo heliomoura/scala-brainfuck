@@ -18,7 +18,7 @@ class BrainFuckSpec extends FreeSpec with Matchers with ScalaFutures {
       w executar ",+."
       ss shouldEqual List( 14 ) }
 
-    "Executa o somatório de zero a um valor infromado na entrada." in {
+    "Lê um valor e o guarda na posição 0 da memória depois o copia para a posição 1 da memória, zerando a posição 0." in {
 
       var ss = ListBuffer[ Byte ]()
       val w = new BrainFuck entrada Some( 
@@ -31,7 +31,7 @@ class BrainFuckSpec extends FreeSpec with Matchers with ScalaFutures {
       w executar ",[->+<].>."
       ss shouldEqual List( 0, 13 ) }
 
-    "Executa simplesmente 3" in {
+    "Calcula o somatório de valores informados um a um." in {
 
       var ss = ListBuffer[ Byte ]()
       var d = List( 1, 2, 3, 4, 5 )
